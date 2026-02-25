@@ -4,6 +4,32 @@
 
 本Skill整合了24个高质量提示词模板,涵盖AI视频生成的全流程:从小说改编、角色设计、分镜生成到最终视频提示词输出。支持多种AI视频工具(可灵、即梦、Vidu、NanoBananaPro等)。
 
+## ⚠️ 核心原则: 提示词必须完整详尽
+
+**不节省Token**: 视频生成提示词必须完整详尽，不得为节省Token而缩略删减。
+
+**原因**: AI视频生成工具(可灵/即梦/Vidu等)依赖详细描述来理解场景、光影、动作和氛围。缩略提示词会严重影响视频质量，导致生成结果与预期不符。
+
+**标准**:
+- 单条视频提示词至少 **50-100英文单词**
+- 复杂场景需 **200+英文单词**
+- 必须包含: 主体描述 + 环境氛围 + 光影风格 + 镜头运动 + 质量标签
+
+**示例对比**:
+```
+❌ 缩略版 (20词) - 不可接受:
+A man fighting with sword, golden lightning, 8k
+
+✅ 完整版 (80词) - 标准:
+A young swordsman in black ancient costume, dynamic fighting stance, 
+swinging blade with golden lightning trailing, sparks flying, 
+dramatic cinematic lighting, 45-degree side light, dark mystical 
+background, 8k resolution, ultra detailed, photorealistic, 
+sharp focus, masterpiece
+```
+
+---
+
 ## 已整合模板清单
 
 ### 1. 剧本改编类
