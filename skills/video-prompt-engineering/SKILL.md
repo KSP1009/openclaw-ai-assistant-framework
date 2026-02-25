@@ -11,21 +11,20 @@
 **原因**: AI视频生成工具(可灵/即梦/Vidu等)依赖详细描述来理解场景、光影、动作和氛围。缩略提示词会严重影响视频质量，导致生成结果与预期不符。
 
 **标准**:
-- 单条视频提示词至少 **50-100英文单词**
-- 复杂场景需 **200+英文单词**
+- 单条视频提示词至少 **50-100中文字**
+- 复杂场景需 **200+中文字**
 - 必须包含: 主体描述 + 环境氛围 + 光影风格 + 镜头运动 + 质量标签
+- **语言**: 使用**中文提示词**，AI视频工具对中文支持良好
 
 **示例对比**:
 ```
-❌ 缩略版 (20词) - 不可接受:
-A man fighting with sword, golden lightning, 8k
+❌ 缩略版 (15字) - 不可接受:
+黑衣男子挥剑，金色闪电
 
-✅ 完整版 (80词) - 标准:
-A young swordsman in black ancient costume, dynamic fighting stance, 
-swinging blade with golden lightning trailing, sparks flying, 
-dramatic cinematic lighting, 45-degree side light, dark mystical 
-background, 8k resolution, ultra detailed, photorealistic, 
-sharp focus, masterpiece
+✅ 完整版 (80字) - 标准:
+古风玄幻黑衣少年侠客，身姿挺拔凌厉，手持长剑向前挥斩，剑身缠绕流动的金色闪电特效，
+电光闪烁，火花四溅，45度侧逆光勾勒人物轮廓，背景是暗调玄幻秘境，冷蓝色调，
+8K超高清，电影级光影，极致细腻渲染
 ```
 
 ---
@@ -223,7 +222,7 @@ E: 高级动作 | F: 治愈情绪 | G: 氛围MV | H: 科普展示
 - 美学词库自动调用
 - Midjourney参数自动添加
 
-**输出格式**: 英文提示词 + 中文解释
+**输出格式**: 中文提示词 (如需英文可在末尾补充)
 
 ### 模板10: 多人对话分镜
 **用途**: 复杂对话场景分镜
@@ -246,8 +245,8 @@ E: 高级动作 | F: 治愈情绪 | G: 氛围MV | H: 科普展示
 
 ### 质量标签
 所有输出必须包含:
-- `"no timecode, no subtitles"`
-- `"masterpiece, best quality, ultra detailed"`
+- `"无时间码，无字幕"`
+- `"8K超高清，极致细节，电影级质感，大师级作品"`
 - `"8k, photorealistic, cinematic lighting"`
 
 ### 时长控制
