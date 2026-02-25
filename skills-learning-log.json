@@ -232,5 +232,19 @@
       "preview": "write-docs.md\n45.3k\n1\n2\n3\n4\nexport write-docs\nfrom \"tldraw/tldraw\"\nWriting SDK documentation for tld"
     },
     "details": "This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot."
+  },
+  {
+    "timestamp": "2026-02-25T12:00:02.594Z",
+    "hour": 20,
+    "category": "🎬 视频/图片",
+    "searchQuery": "generate",
+    "skillLearned": {
+      "name": "nano-banana-pro",
+      "stars": "222.6k",
+      "link": "https://skillsmp.com/skills/openclaw-openclaw-skills-nano-banana-pro-skill-md",
+      "path": "openclaw-openclaw-skills-nano-banana-pro-skill-md",
+      "preview": "nano-banana-pro.md\n222.6k\n1\n2\n3\n4\nexport nano-banana-pro\nfrom \"openclaw/openclaw\"\nGenerate or edit i"
+    },
+    "details": "// Generate or edit images via Gemini 3 Pro Image (Nano Banana Pro)."
   }
 ]
