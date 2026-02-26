@@ -77,7 +77,7 @@ async function learnSkill() {
       console.log(`  → 已加载Cookie (${authCookie.length} 字符)`);
     } catch (e) {
       console.log(`  → 未找到Cookie文件，将使用未登录模式`);
-    }REF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TURBd01EQXdNREF3TUR
+    }
     
     // 确定当前小时要学习的类别
     let targetCategory;
@@ -103,10 +103,19 @@ async function learnSkill() {
     
     // 设置Cookie到页面（如果存在）
     if (authCookie) {
-      await page.setExtraHTTPHeaders({
-        'Cookie': authCookie
-      });
-      console.log(`  → 已设置登录Cookie`);
+      // 解析Cookie字符串并设置
+      const cookies = authCookie.split(';').map(c => {
+        const [name, ...valueParts] = c.trim().split('=');
+        return {
+          name: name.trim(),
+          value: valueParts.join('=').trim(),
+          domain: 'skillsmp.com',
+          path: '/'
+        };
+      }).filter(c => c.name && c.value);
+      
+      await page.setCookie(...cookies);
+      console.log(`  → 已设置登录Cookie (${cookies.length} 个)`);
     }
     
     // 使用搜索获取更多技能
