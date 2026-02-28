@@ -1,247 +1,127 @@
-# 🚀 OpenClaw AI助手完整框架
+# OpenClaw AI Assistant Framework
 
-> **一键部署完整的AI助手系统**
->
-> 包含7步深度使用法、4层模型池、3层记忆体系、11个定时任务
-
----
+一个专业、高效、自主成长的AI助手框架，专为AI自媒体博主设计。
 
 ## ✨ 特性
 
-- ✅ **7步深度使用法** - 智能备份、模型池、会话识别、压缩、铁律、学习、进化
-- ✅ **4层模型池** - 高速/智能/文本/视觉，自动切换
-- ✅ **3层记忆体系** - 工作/短期/长期，持续进化
-- ✅ **11个定时任务** - 自动化运行，无需人工干预
-- ✅ **Heartbeat机制** - 让记忆"活"起来
-- ✅ **一键安装** - 3分钟完成部署
+### 🚀 核心能力
+- **7步深度使用法**：智能备份、模型池、会话识别、上下文压缩、任务铁律、陌生任务处理、自我进化
+- **24小时定向学习**：根据时段自动学习相关技能（视觉创作 + 自媒体运营）
+- **AI自我成长**：Skill深度学习、经验总结、知识整合、创造新能力
+- **3层记忆体系**：工作记忆、短期记忆、长期记忆
+- **10个定时任务**：自动维护、学习、进化、报告
 
----
+### 📊 模型池体系
+- 高速池：zai/glm-4.7（快速响应）
+- 智能池：zai/glm-5（复杂推理）
+- 文本池：zai/glm-5（长文本）
+- 视觉池：zai/glm-4.6v（图片/视频）
 
-## 📦 快速开始
+### 🎯 24小时学习规则
+- 前12小时（00:00-12:00）：视觉创作时段
+  - 图像生成、提示词工程
+  - 视频制作、剪辑工具
+  - 视觉优化、设计工具
+- 后12小时（12:00-24:00）：自媒体运营时段
+  - 内容创作、文案写作
+  - 社交媒体、互动运营
+  - 数据分析、自动化营销
 
-### 方法1：自动安装（推荐）
+## 🚀 快速开始
+
+### 1. 安装
 
 ```bash
-# 下载并运行安装脚本
-cd ~/.openclaw/workspace
-git clone [仓库地址] .
+git clone https://github.com/Work-Fisher/openclaw-ai-assistant-framework.git
+cd openclaw-ai-assistant-framework
 chmod +x install.sh
 ./install.sh
 ```
 
-### 方法2：手动安装
+### 2. 配置
 
-```bash
-# 1. 创建目录
-mkdir -p ~/.openclaw/workspace/{config,scripts,data,memory,skills,logs}
-
-# 2. 复制文件
-# 将 config/ 和 scripts/ 目录复制到 ~/.openclaw/workspace/
-
-# 3. 安装ClawHub
-npm install -g clawhub
-
-# 4. 配置定时任务
-openclaw cron add --name "heartbeat-check" --cron "*/30 * * * *" --system-event "heartbeat_check"
-```
-
----
-
-## 📚 核心功能
-
-### 1️⃣ 智能备份机制
-
-**触发条件**: 24小时 或 10K文件变化
-**备份策略**: 7天轮换（周一~周日）
-
-```bash
-# 手动备份
-bash ~/.openclaw/workspace/scripts/smart-backup.sh
-
-# 手动恢复
-bash ~/.openclaw/workspace/scripts/auto-restore.sh
-```
-
----
-
-### 2️⃣ 四层模型池
-
-| 模型池 | 主模型 | 用途 |
-|:---|:---|:---|
-| 高速池 | glm-4.7 | 快速响应 |
-| 智能池 | glm-5 | 复杂推理 |
-| 文本池 | kimi-k2.5 | 长文本 |
-| 视觉池 | glm-4.6v | 图片/视频 |
-
-**自动切换**: 根据任务类型自动选择合适的模型池
-
----
-
-### 3️⃣ Heartbeat记忆维护
-
-**每30分钟自动执行**:
-- 检查紧急事项
-- 整理记忆
-- 清理日志
-- 检查提醒
-
-**每日维护**:
-- 提取重要决策
-- 更新长期记忆
-
-**每周维护**:
-- 回顾记忆
-- 清理旧文件
-
----
-
-### 4️⃣ 每日进化报告
-
-**每天22:00自动生成**:
-- 今日学习统计
-- 错误总结
-- 固化技能建议
-- 明日改进计划
-
----
-
-## 🎯 使用示例
-
-### 示例1：自动任务识别
-
-```
-用户: 帮我分析一下数据
-
-AI: [自动识别] 任务属于复杂推理
-    [自动切换] 使用智能池
-    [执行] 分析完成
-```
-
-### 示例2：陌生任务处理
-
-```
-用户: 帮我处理PDF
-
-AI: [识别] 陌生任务
-    [学习] 搜索ClawHub
-    [安装] pdf-skill
-    [执行] 处理完成
-```
-
----
-
-## 📊 定时任务列表
-
-| 任务 | 频率 | 说明 |
-|:---|:---|:---|
-| heartbeat-check | 每30分钟 | 记忆维护 |
-| daily-evolution | 22:00 | 每日进化报告 |
-| model-health-check | 每6小时 | 模型池健康检查 |
-| smart-backup | 每小时 | 智能备份 |
-
----
-
-## 🔧 自定义配置
-
-### 修改身份信息
-
-编辑 `~/.openclaw/workspace/IDENTITY.md`:
-
-```markdown
-- **Name:** 你的AI助手名称
-- **Role:** 助手角色定位
-```
-
-### 修改用户信息
-
-编辑 `~/.openclaw/workspace/USER.md`:
-
-```markdown
-- **Name:** 用户名称
-- **Timezone:** 时区
-```
-
-### 修改模型池
-
-编辑 `~/.openclaw/workspace/config/model-pools.json`:
-
+编辑 `config/model-pools.json` 配置模型池：
 ```json
 {
   "pools": {
-    "fast": {
-      "primary": "你的模型",
-      "fallback": "备用模型"
-    }
+    "fast": {"primary": "zai/glm-4.7", "fallback": "zai/glm-4.7"},
+    "smart": {"primary": "zai/glm-5", "fallback": "zai/glm-5"},
+    "text": {"primary": "zai/glm-5", "fallback": "zai/glm-4.7"},
+    "vision": {"primary": "zai/glm-4.6v", "fallback": "zai/glm-4.6v"}
   }
 }
 ```
 
----
-
-## 📖 完整文档
-
-查看完整框架文档：
-```bash
-cat ~/.openclaw/workspace/docs/openclaw-ai-assistant-framework.md
-```
-
----
-
-## 🆘 常见问题
-
-### Q: 定时任务没有运行？
+### 3. 启动定时任务
 
 ```bash
-# 检查定时任务状态
-openclaw cron list
-
-# 手动触发测试
-python3 ~/.openclaw/workspace/scripts/heartbeat-check.py
+# 添加定时任务
+openclaw cron add --name "install-skills-infinite" --cron "0 * * * *" ...
+openclaw cron add --name "heartbeat-notify" --cron "*/30 * * * *" ...
+openclaw cron add --name "daily-evolution" --cron "0 22 * * *" ...
+openclaw cron add --name "daily-growth-report" --cron "0 9 * * *" ...
 ```
 
-### Q: 技能安装失败？
+## 📚 文档
 
-```bash
-# 检查ClawHub CLI
-clawhub --version
+- [完整框架文档](docs/openclaw-ai-assistant-framework.md)
+- [AI自我成长计划](docs/ai-self-evolution-plan.md)
+- [Skill深度学习机制](docs/skill-deep-learning.md)
+- [上下文压缩机制](docs/context-compression-mechanism.md)
+- [每日成长报告机制](docs/daily-growth-report-mechanism.md)
 
-# 重新安装
-npm install -g clawhub --force
-```
+## 🔧 核心脚本
 
-### Q: 模型池不健康？
+- `learn-skill-cli.js` - 技能学习脚本（24小时定向学习）
+- `scripts/extract-skill-knowledge.py` - Skill知识提取脚本
+- `scripts/heartbeat-check.py` - Heartbeat检查脚本
+- `scripts/daily-evolution.py` - 每日进化报告脚本
+- `scripts/model-health-check.py` - 模型健康检查脚本
 
-```bash
-# 运行健康检查
-python3 ~/.openclaw/workspace/scripts/model-health-check.py
+## 📊 定时任务（10个）
 
-# 查看状态
-cat ~/.openclaw/workspace/data/model-health-status.json
-```
+### 维护类
+1. heartbeat-notify - 每30分钟
+2. model-health-check - 每6小时
 
----
+### 学习类
+3. install-skills-infinite - 每小时（24小时定向学习）
 
-## 📝 更新日志
+### 进化类
+4. daily-evolution - 每天22:00
+5. daily-growth-report - 每天09:00
 
-### v2.0 (2026-02-27)
-- ✅ 完成7步深度使用法
-- ✅ 添加Heartbeat机制
-- ✅ 优化模型池配置
-- ✅ 增强记忆维护
+## 🎯 版本历史
 
----
+### v3.0（2026-02-28）
+- ✅ 24小时定向学习系统
+- ✅ AI自我成长机制
+- ✅ Skill深度学习机制
+- ✅ 经验总结机制
+- ✅ 知识整合机制
+- ✅ 完整框架固化
+
+### v2.0（2026-02-27）
+- ✅ 7步深度使用框架
+- ✅ 4层模型池体系
+- ✅ 3层记忆体系
+- ✅ 11个定时任务
 
 ## 🤝 贡献
 
-欢迎提交 Issue 和 Pull Request！
-
----
+欢迎贡献！请查看 [贡献指南](CONTRIBUTING.md)
 
 ## 📄 许可证
 
 MIT License
 
+## 🙏 致谢
+
+感谢 OpenClaw 提供的强大框架支持。
+
 ---
 
-_框架版本: v2.0_
-_创建时间: 2026-02-27_
+**当前版本**：v3.0（自我成长版）
+**最后更新**：2026-02-28
+
+🚀 持续进化中...
